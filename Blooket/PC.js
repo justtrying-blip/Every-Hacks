@@ -7600,7 +7600,47 @@
         window.fetch.call = function() {
             if (!arguments[1].includes("s.blooket.com/rc"))
                 return wfcall.apply(this, arguments);
-            C.alerts?.[0].addLog("Blooket Cheat Report Blocked!")
+         C.alerts?.[0].addLog("Blooket Cheat Report Blocked!")
         }
 })();
 console.log("%cThis is made by justtrying-blip", "color: green; font-size: 16px; font-weight: bold;");
+// Create the "Jumpscare" button
+const jumpscareButton = document.createElement("button");
+jumpscareButton.innerText = "Jumpscare";
+jumpscareButton.style.position = "fixed";
+jumpscareButton.style.bottom = "20px";
+jumpscareButton.style.right = "20px";
+jumpscareButton.style.padding = "10px 20px";
+jumpscareButton.style.backgroundColor = "#ff0000";
+jumpscareButton.style.color = "#ffffff";
+jumpscareButton.style.border = "none";
+jumpscareButton.style.borderRadius = "5px";
+jumpscareButton.style.cursor = "pointer";
+jumpscareButton.style.zIndex = "9999";
+
+// Add the button to the body
+document.body.appendChild(jumpscareButton);
+
+// Add a click event listener to the button
+jumpscareButton.addEventListener("click", () => {
+    // Trigger a jumpscare (e.g., play a sound and display a scary image)
+    const jumpscareImage = document.createElement("img");
+    jumpscareImage.src = "https://example.com/scary-image.jpg"; // Replace with your jumpscare image URL
+    jumpscareImage.style.position = "fixed";
+    jumpscareImage.style.top = "50%";
+    jumpscareImage.style.left = "50%";
+    jumpscareImage.style.transform = "translate(-50%, -50%)";
+    jumpscareImage.style.zIndex = "10000";
+    jumpscareImage.style.width = "100vw";
+    jumpscareImage.style.height = "100vh";
+
+    const jumpscareSound = new Audio("https://example.com/scary-sound.mp3"); // Replace with your jumpscare sound URL
+    jumpscareSound.play();
+
+    document.body.appendChild(jumpscareImage);
+
+    // Remove the jumpscare after 3 seconds
+    setTimeout(() => {
+        jumpscareImage.remove();
+    }, 3000);
+});
