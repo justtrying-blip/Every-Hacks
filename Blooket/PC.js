@@ -7603,3 +7603,4 @@
             C.alerts?.[0].addLog("Blooket Cheat Report Blocked!")
         }
 })();
+console.log("%cThis is made by justtrying-blip", "color: green; font-size: 16px; font-weight: bold;");
